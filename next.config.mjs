@@ -1,11 +1,7 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === "production";
-
 const nextConfig = {
   output: "export",
-  // GitHub Pages serves at /landing/; skip in local `next dev`
-  basePath: isProd ? "/landing" : "",
-  assetPrefix: isProd ? "/landing" : "",
+  // Custom domain (www.soralabs.io.vn) serves at site root — no /landing basePath
   images: {
     unoptimized: true,
   },

@@ -10,8 +10,8 @@ export default function Rounded({
 	...attributes
 }: TRoundedProps) {
 	const circle = useRef<HTMLDivElement>(null);
-	let timeline = useRef<gsap.core.Timeline | null>(null);
-	let timeoutId: NodeJS.Timeout | null = null;
+	const timeline = useRef<gsap.core.Timeline | null>(null);
+	const timeoutId = useRef<ReturnType<typeof setTimeout> | null>(null);
 	useEffect(() => {
 		timeline.current = gsap.timeline({ paused: true });
 		timeline.current
@@ -28,12 +28,12 @@ export default function Rounded({
 	}, []);
 
 	const manageMouseEnter = () => {
-		if (timeoutId) clearTimeout(timeoutId);
+		if (timeoutId.current) clearTimeout(timeoutId.current);
 		timeline.current?.tweenFromTo("enter", "exit");
 	};
 
 	const manageMouseLeave = () => {
-		timeoutId = setTimeout(() => {
+		timeoutId.current = setTimeout(() => {
 			timeline.current?.play();
 		}, 150);
 	};

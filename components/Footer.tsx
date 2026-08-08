@@ -22,7 +22,7 @@ export default function Footer() {
             </h1>
             <div className="pt-[50px]">
               <h1 className="paragraph font-medium font-NeueMontreal text-secondry pb-[20px]">
-                S:
+                Socials:
               </h1>
               {footerItems.map((item) => (
                 <LinkHover
@@ -36,7 +36,7 @@ export default function Footer() {
             <div className="flex justify-between">
               <div className="pt-[50px]">
                 <h1 className="paragraph font-medium font-NeueMontreal text-secondry pb-[20px]">
-                  L:
+                  Location:
                 </h1>
                 <div className="flex flex-col gap-y-[10px]">
                   <LinkHover
@@ -53,7 +53,7 @@ export default function Footer() {
               </div>
               <div className="pt-[50px]">
                 <h1 className="paragraph font-medium font-NeueMontreal text-secondry pb-[20px]">
-                  M:
+                  Menu:
                 </h1>
                 <div className="flex flex-col">
                   {footernavbarItems.map((item) =>
@@ -79,7 +79,7 @@ export default function Footer() {
             </div>
             <div className="pt-[50px] flex gap-x-[20px] max-w-full overflow-hidden">
               <h1 className="paragraph font-medium font-NeueMontreal text-secondry shrink-0">
-                E:
+                Email:
               </h1>
               <LinkHover
                 title="truonggiang.axyl@gmail.com"

@@ -6,13 +6,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { text, curve, translate } from "@/motion";
 
 const routes: Record<string, string> = {
-  "/": "Home",
-  "/services": "Services",
-  "/presentation": "Our Work",
-  "/ochi-team": "About Us",
-  "/insights": "Insights",
-  "/contact": "Contact Us",
-  "/case": "Workiz Easy",
+	"/": "Home",
 };
 
 function normalizePathname(pathname: string) {
@@ -37,6 +31,7 @@ type CurveProps = {
 };
 
 export default function Curve({ children, backgroundColor }: CurveProps) {
+  // Live destination path (updates as soon as navigation starts), same as Pages router.route
   const pathname = normalizePathname(usePathname() ?? "/");
   const [dimensions, setDimensions] = useState<{
     width: number | null;
@@ -61,16 +56,16 @@ export default function Curve({ children, backgroundColor }: CurveProps) {
   }, []);
 
   return (
-    <div style={{ backgroundColor }}>
+    <div style={{ backgroundColor }} className="relative">
       <div
         style={{ opacity: dimensions.width == null ? 1 : 0 }}
         className="fixed h w-full pointer-events-none left-0 top-0 z-50 bg-black"
       />
       <motion.p
-        className="absolute left-1/2 top-[40%] text-white text-[50px] z-[60] -translate-x-1/2 text-center"
+        className="fixed left-1/2 top-[40%] -translate-x-1/2 text-white text-[50px] z-[60] text-center pointer-events-none whitespace-nowrap"
         {...anim(text)}
       >
-        {routes[pathname]}
+        {routes[pathname] ?? "Soralabs"}
       </motion.p>
       {dimensions.width != null && dimensions.height != null && (
         <SVG width={dimensions.width} height={dimensions.height} />
@@ -102,7 +97,7 @@ function SVG({ height, width }: { height: number; width: number }) {
       className="fixed h w-full pointer-events-none left-0 top-0 z-50"
       {...anim(translate)}
     >
-      <motion.path {...anim(curve(initialPath, targetPath))} />
+      <motion.path fill="black" {...anim(curve(initialPath, targetPath))} />
     </motion.svg>
   );
 }

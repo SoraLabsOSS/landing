@@ -3,7 +3,8 @@ import "@/styles/globals.css";
 import AppShell from "@/components/AppShell";
 
 export const metadata: Metadata = {
-  title: "OCHI - Presentation Design Agency",
+  title:
+    "Soralabs — We build polished digital products and reusable UI systems for developers.",
 };
 
 export default function RootLayout({

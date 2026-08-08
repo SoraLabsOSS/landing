@@ -19,7 +19,7 @@ export default function Eyes({ className }: { className: string }) {
 	}, []);
 
 	return (
-		<div className="w-full gap-[30px] flex items-center justify-center">
+		<div className="w-full max-w-full gap-[30px] sm:gap-[20px] xm:gap-[16px] flex items-center justify-center overflow-hidden">
 			<div
 				className={`bg-white border-[2px] border-[#21212188] rounded-full flex items-center justify-center ${className}`}>
 				<Image

@@ -2,60 +2,58 @@ const easeInOut = [0.76, 0, 0.24, 1] as const;
 const easeOut = [0.33, 1, 0.68, 1] as const;
 
 export const navVariants = {
-    hidden: { y: "-100%" },
-    vissible: { y: 0, transition: { ease: easeInOut, duration: 0.7 }, }
+  hidden: { y: "-100%" },
+  vissible: { y: 0, transition: { ease: easeInOut, duration: 0.7 } },
 };
 
 export const navVariants1 = {
-    hidden: { y: "-100%" },
-    vissible: { y: 0, transition: { ease: easeInOut, duration: 0.7 }, }
+  hidden: { y: "-100%" },
+  vissible: { y: 0, transition: { ease: easeInOut, duration: 0.7 } },
 };
 
 export const footerVarient = {
-    hidden: { y: 150, opacity: 0 },
-    vissible: { y: 0, opacity: 1, transition: { duration: 1, ease: easeInOut }, },
+  hidden: { y: 150, opacity: 0 },
+  vissible: { y: 0, opacity: 1, transition: { duration: 1, ease: easeInOut } },
 };
-
 
 export const animation = {
-    initial: { y: "100%" },
-    visible: {
-        y: "0",
-        transition: {
-            duration: 0.75,
-            ease: easeOut,
-        },
+  initial: { y: "100%" },
+  visible: {
+    y: "0",
+    transition: {
+      duration: 0.75,
+      ease: easeOut,
     },
+  },
 };
-
 
 // navbar
 // MENUSLIDE
 export const menuSlide = {
-    initial: { x: "calc(100% + 100px)" },
-    enter: { x: "0", transition: { duration: 0.8, ease: easeInOut } },
-    exit: {
-        x: "calc(100% + 100px)",
-        transition: { duration: 0.8, ease: easeInOut },
-    },
+  initial: { x: "calc(100% + 100px)" },
+  enter: { x: "0", transition: { duration: 0.8, ease: easeInOut } },
+  exit: {
+    x: "calc(100% + 100px)",
+    transition: { duration: 0.8, ease: easeInOut },
+  },
 };
 // SLIDE
 export const slide = {
-    initial: { x: 80 },
-    enter: (i: number) => ({
-        x: 0,
-        transition: { duration: 0.8, ease: easeInOut, delay: 0.05 * i },
-    }),
-    exit: (i: number) => ({
-        x: 80,
-        transition: { duration: 0.8, ease: easeInOut, delay: 0.05 * i },
-    }),
+  initial: { x: 80 },
+  enter: (i: number) => ({
+    x: 0,
+    transition: { duration: 0.8, ease: easeInOut, delay: 0.05 * i },
+  }),
+  exit: (i: number) => ({
+    x: 80,
+    transition: { duration: 0.8, ease: easeInOut, delay: 0.05 * i },
+  }),
 };
 
 // SCALE
 export const scale = {
-    open: { scale: 1, transition: { duration: 0.3 } },
-    closed: { scale: 0, transition: { duration: 0.4 } },
+  open: { scale: 1, transition: { duration: 0.3 } },
+  closed: { scale: 0, transition: { duration: 0.4 } },
 };
 
 // CURVE
@@ -63,79 +61,81 @@ let initialPath = "";
 let targetPath = "";
 
 if (typeof window !== "undefined") {
-    initialPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${window.innerHeight
-        } Q-100 ${window.innerHeight / 2} 100 0`;
-    targetPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${window.innerHeight
-        } Q100 ${window.innerHeight / 2} 100 0`;
+  initialPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${
+    window.innerHeight
+  } Q-100 ${window.innerHeight / 2} 100 0`;
+  targetPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${
+    window.innerHeight
+  } Q100 ${window.innerHeight / 2} 100 0`;
 }
 
 export const text = {
-    initial: {
-        opacity: 1,
-    },
-    enter: {
-        opacity: 0,
-        top: -100,
-        transition: { duration: .75, delay: .35, ease: easeInOut },
-        transitionEnd: { top: "47.5%" }
-    },
-    exit: {
-        opacity: 1,
-        top: "40%",
-        transition: { duration: .5, delay: .4, ease: easeOut }
-    }
+  initial: {
+    opacity: 1,
+    top: "40%",
+  },
+  enter: {
+    opacity: 0,
+    top: "-100px",
+    transition: { duration: 0.75, delay: 0.35, ease: easeInOut },
+    transitionEnd: { top: "40%" },
+  },
+  exit: {
+    opacity: 1,
+    top: "40%",
+    transition: { duration: 0.5, delay: 0.4, ease: easeOut },
+  },
 };
 
 export const curve = (initialPath: string, targetPath: string) => {
-    return {
-        initial: {
-            d: initialPath
-        },
-        enter: {
-            d: targetPath,
-            transition: { duration: .75, delay: .35, ease: easeInOut }
-        },
-        exit: {
-            d: initialPath,
-            transition: { duration: .75, ease: easeInOut }
-        }
-    };
+  return {
+    initial: {
+      d: initialPath,
+    },
+    enter: {
+      d: targetPath,
+      transition: { duration: 0.75, delay: 0.35, ease: easeInOut },
+    },
+    exit: {
+      d: initialPath,
+      transition: { duration: 0.75, ease: easeInOut },
+    },
+  };
 };
 
 export const translate = {
-    initial: {
-        top: "-300px"
+  initial: {
+    top: "-300px",
+  },
+  enter: {
+    top: "-100vh",
+    transition: { duration: 0.75, delay: 0.35, ease: easeInOut },
+    transitionEnd: {
+      top: "100vh",
     },
-    enter: {
-        top: "-100vh",
-        transition: { duration: .75, delay: .35, ease: easeInOut },
-        transitionEnd: {
-            top: "100vh"
-        }
-    },
-    exit: {
-        top: "-300px",
-        transition: { duration: .75, ease: easeInOut }
-    }
+  },
+  exit: {
+    top: "-300px",
+    transition: { duration: 0.75, ease: easeInOut },
+  },
 };
 
-
 export const opacity = {
-    initial: {
-        opacity: 0
-    },
-    enter: {
-        opacity: 0.75,
-        transition: { duration: 1, delay: 0.2 }
-    },
+  initial: {
+    opacity: 0,
+  },
+  enter: {
+    opacity: 0.75,
+    transition: { duration: 1, delay: 0.2 },
+  },
 };
 
 export const slideUp = {
-    initial: {
-        top: 0
-    },
-    exit: {
-        top: "-100vh",
-        transition: { duration: 0.8, ease: easeInOut, delay: 0.2 }
-    }
+  initial: {
+    top: 0,
+  },
+  exit: {
+    top: "-100vh",
+    transition: { duration: 0.8, ease: easeInOut, delay: 0.2 },
+  },
 };

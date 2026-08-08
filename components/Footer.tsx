@@ -33,7 +33,7 @@ export default function Footer() {
                 />
               ))}
             </div>
-            <div className="flex justify-between sm:flex-col xm:flex-col">
+            <div className="flex justify-between">
               <div className="pt-[50px]">
                 <h1 className="paragraph font-medium font-NeueMontreal text-secondry pb-[20px]">
                   L:

@@ -52,7 +52,7 @@ export default function About() {
               </div>
               <div className="w-[60%] flex justify-end flex-col  sm:w-full xm:w-full">
                 <h1 className="sub-paragraph font-medium font-NeueMontreal text-secondry pb-[20px]">
-                  S:
+                  Socials:
                 </h1>
                 <div className="flex flex-col">
                   {footerItems.map((item) => (

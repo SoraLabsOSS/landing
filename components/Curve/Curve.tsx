@@ -6,7 +6,8 @@ import { useEffect, useState, type ReactNode } from "react";
 import { text, curve, translate } from "@/motion";
 
 const routes: Record<string, string> = {
-	"/": "Home",
+  "/": "Home",
+  "/contact": "Contact",
 };
 
 function normalizePathname(pathname: string) {

@@ -34,7 +34,6 @@ export default function Ready() {
               className="bg-white text-black"
               bgcolor="#000"
               style={{ color: "#fff" }}
-              disabled
             />
           </div>
           <p className="text-[20px] font-NeueMontreal text-secondry">OR</p>

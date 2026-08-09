@@ -72,7 +72,7 @@ export const navbarItems = [
     id: 5,
     title: "Contact",
     href: "/contact",
-    disabled: true,
+    disabled: false,
   },
 ];
 
@@ -131,7 +131,7 @@ export const footernavbarItems = [
     id: 6,
     title: "Contact",
     href: "/contact",
-    disabled: true,
+    disabled: false,
   },
 ];
 
@@ -1315,113 +1315,114 @@ export const aboutPartberItems = [
 export const FaqItems = [
   {
     id: 1,
-    question: "How many iterations the project includes?",
+    question: "Do you deliver Figma files?",
     title: "Description",
     description:
-      "We’re committed to delighting every one of our clients and will do everything to deliver on the project fully. We iterate as much as needed to ensure the best result.",
+      "No. We don’t ship Figma. Soralabs builds in code — working interfaces, components, and product UI you can run, review, and ship.",
     links: [
       {
         id: 1,
         title: 1,
         description:
-          "Based on our experience and ways of working, no more than three revisions are needed to meet clients’ expectations and business needs.",
+          "If you already have designs, we can implement them. If not, we shape the UI directly in the codebase as we build.",
       },
       {
         id: 2,
         title: 2,
         description:
-          "If your project is something we are not capable of doing, we will say it right there and won’t commit. Instead, we will refer you to specialists in any field you need and we might know.",
+          "What you get is production-ready front-end work, not a handoff file sitting in a design tool.",
       },
     ],
     button: "read",
   },
   {
     id: 2,
-    question: "Do you animate presentations?",
+    question: "How many iterations does a project include?",
     title: "Description",
     description:
-      "Movement is what attracts the eye. But not every presentation requires animation, although we do agree that animated presentations give a wow effect. We surely add transitions and animation to your presentation where we think it increases engagement, surprise, or simply delivers the message flawlessly.",
+      "We iterate in the product itself. Reviews happen on real screens and components, so feedback lands closer to what users will actually see.",
     links: [
       {
         id: 1,
         title: 1,
         description:
-          "By the way, animated presentations can also be used for marketing purposes to promote your ideas via socials.",
+          "Most projects settle within two to three focused revision rounds once scope and priorities are clear.",
+      },
+      {
+        id: 2,
+        title: 2,
+        description:
+          "If something sits outside what we do best, we’ll say so early rather than stretch the work into the wrong shape.",
       },
     ],
     button: "read",
   },
   {
     id: 3,
-    question: "Do you join forces with other agencies?",
+    question: "Do you build motion into products and UI systems?",
     title: "Description",
     description:
-      "Yes, we do partner with other creative agencies where we lack expertise or experience. We carefully select our partners and frequently collaborate on brand identity, web design, animation design, and other fine initiatives that benefit both us and our clients. All with the purpose to expand our creative POV and supplementing you with top-notch work.",
+      "Yes — in code. We add transitions and micro-interactions where they clarify hierarchy, feedback, or delight, not as decoration for a mockup.",
     links: [
       {
         id: 1,
         title: 1,
         description:
-          "By the way, animated presentations can also be used for marketing purposes to promote your ideas via socials.",
+          "That includes motion-ready components, scroll sequences, and product moments that ship with the interface.",
       },
     ],
     button: "read",
   },
   {
     id: 4,
-    question: "I want to become a part of the team! Do you hire?",
+    question: "Do you partner with other studios or agencies?",
     title: "Description",
     description:
-      "Yes! We actively search for talent to join us in completing high-stake presentation design projects at OCHI. As a presentation agency, we always aim to create the best products and services possible. Hence, we are looking for someone who will enjoy helping us fuse design and thinking into something impactful and beautiful.",
+      "Yes. When a project needs branding, content, or specialized back-end work, we collaborate with trusted partners while we stay focused on the front-end build.",
     links: [
       {
         id: 1,
         title: 1,
         description:
-          "If you feel like you’re on top of your creative game, whether it’s storytelling, graphic design, or animation. Send us the CV and portfolio at Ihor@ochi.design with “CREATE AND THRILL” in the subject. We will get back to you and maybe schedule a call. If there’s a potential fit here, you will meet the team. If that goes well – you’ll become a part of it.",
-      },
-      {
-        id: 2,
-        title: 2,
-        description:
-          "If you think you can improve our processes, marketing, PR, and communications, or you excel at managing people, we would love to hear from you. Send your message to hello@ochi.design with “-” and we will get back to you.",
+          "You still get one clear point of contact on our side so collaboration stays simple.",
       },
     ],
     button: "read",
   },
   {
     id: 5,
-    question: "Can I hire you for publish speaking, or student workshop?",
+    question: "I want to join the team — do you hire?",
     title: "Description",
-    description: "The short answer is yes.",
+    description:
+      "We’re selective, but always looking for people who care about shipping real UI in code — systems thinking, clean front-end craft, and thoughtful interfaces.",
     links: [
       {
         id: 1,
         title: 1,
         description:
-          "Through our work, we empower brands to make a difference. But while, the presentations that raise millions help in the long run by providing resources for organizations to evolve, create new workplaces, and make things better. We also offer our corporate clients personal training. We love visiting traditional university students to share insights and expertise through masterclasses and workshops. This is how we make things better by teaching others how to make better things. And this changes the world here and now.",
+          "If you excel at front-end engineering or creative coding, send a CV and work samples to truonggiang.axyl@gmail.com with “CREATE AND SHIP” in the subject.",
       },
       {
         id: 2,
         title: 2,
         description:
-          "If you have an event coming or you are a university academic, please reach out to us with the topic, and we will see how we can help.",
+          "If you can strengthen how we communicate, operate, or grow Soralabs, write to the same inbox with a short note on how you’d help.",
       },
     ],
     button: "read",
   },
   {
     id: 6,
-    question: "Would you like to jump on a podcast or YouTube video?",
+    question: "Would you join a podcast, talk, or workshop?",
     title: "Description",
     description:
-      "Yes, why not. It’s a great chance to give back to the creative community by sharing and learning. Especially if the audience is relevant to the communication design subject. Or maybe it helps our clients in some way. We can’t know until we see some details, so drop us a line with a brief explanation at kseniia@ochi.design with the “Podcast/YT Proposal”.",
+      "Yes — especially when the audience cares about building polished product UI, component systems, or shipping interfaces in code.",
     links: [
       {
         id: 1,
         title: 1,
         description:
-          "By the way, animated presentations can also be used for marketing purposes to promote your ideas via socials.",
+          "Drop a short brief to truonggiang.axyl@gmail.com with the format and topic, and we’ll get back to you.",
       },
     ],
     button: "read",

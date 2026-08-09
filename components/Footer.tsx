@@ -77,15 +77,17 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="pt-[50px] flex gap-x-[20px] max-w-full overflow-hidden">
+            <div className="pt-[50px] flex gap-x-[20px] max-w-full min-w-0">
               <h1 className="paragraph font-medium font-NeueMontreal text-secondry shrink-0">
                 Email:
               </h1>
-              <LinkHover
-                title="truonggiang.axyl@gmail.com"
-                href="mailto:truonggiang.axyl@gmail.com"
-                className="before:h-[1px] after:h-[1px] paragraph font-medium before:bottom-[-3px] after:bottom-[-3px] min-w-0 break-all"
-              />
+              <div className="min-w-0">
+                <LinkHover
+                  title="truonggiang.axyl@gmail.com"
+                  href="mailto:truonggiang.axyl@gmail.com"
+                  className="before:h-[1px] after:h-[1px] paragraph font-medium before:bottom-[-3px] after:bottom-[-3px] max-w-full break-all"
+                />
+              </div>
             </div>
           </div>
         </div>

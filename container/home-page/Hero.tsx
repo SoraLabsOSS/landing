@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
@@ -79,18 +80,21 @@ export default function Hero() {
                     From ideas to interfaces
                   </p>
                 </div>
-                <div className="flex items-center gap-[5px] opacity-40 cursor-not-allowed select-none">
-                  <div className="rounded-[50px] border border-[#21212155] py-[3px] px-[12px]">
-                    <span className="paragraph font-NeueMontreal text-secondry uppercase">
+                <Link
+                  href="/contact"
+                  className="flex items-center gap-[5px] group"
+                >
+                  <div className="rounded-[50px] border border-[#21212155] group-hover:bg-secondry py-[3px] px-[12px] transition-all duration-200 ease-in">
+                    <span className="paragraph font-NeueMontreal text-secondry uppercase group-hover:text-background transition-all duration-200 ease-in">
                       let&apos;s work together
                     </span>
                   </div>
-                  <div className="w-[33px] flex items-center justify-center h-[33px] border border-[#21212155] rounded-full p-[1px] xm:hidden sm:hidden">
-                    <p className="font-normal text-secondry">
+                  <div className="w-[33px] flex items-center justify-center h-[33px] border border-[#21212155] rounded-full p-[1px] group-hover:bg-secondry transition-all duration-200 ease-in xm:hidden sm:hidden">
+                    <p className="font-normal text-secondry group-hover:text-background transition-all duration-200 ease-in">
                       <ArrowUpRight size={24} strokeWidth={1.25} />
                     </p>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
             <div className="w-full flex items-center overflow-hidden justify-center xm:hidden sm:hidden">
